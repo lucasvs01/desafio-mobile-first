@@ -1,10 +1,13 @@
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 :root {
+
     font-size: 62.5%;
 
     --font-header: 'Staatliches', cursive;
@@ -17,7 +20,6 @@
     --color-h2: hsl(232, 17%, 35%);
     --color-p: hsl(274, 84%, 12%);
 
-
 }
 
 body {
@@ -27,11 +29,10 @@ body {
     background-color: var(--bg-color);
     font-family: var(--font-header);
 
-    
-
 }
 
 body::before {
+
     content: "";
     position: absolute;
     top: 0;
@@ -42,14 +43,17 @@ body::before {
     height: 28rem;
 
     background-color: var(--bg-color-secundary);
+
 }
 
 header {
+
     height: 28rem;
     
 }
 
 header img {
+
     margin: 3.2rem auto 0;
 
 }
@@ -68,22 +72,14 @@ header h1 {
     margin: 3.2rem auto 0;
     padding: 8px 0;
 
-
-
 }
 
 main {
+
     max-width: 32rem;
     height: 164.2rem;
     margin: 1.4rem auto 6rem;
-
-    
-
-    
-    
-
 }
-
 
 main p {
 
@@ -95,23 +91,21 @@ main p {
     line-height: 1.5rem;
 
     margin: 0 auto 6.3rem;
-    padding: 0 4rem;
 
     max-width: 30.5rem;
-
 
 }
 
 main .card {
 
     position: relative;
+
+    animation: topbootom 450ms 450ms backwards;
     
-
-
-
 }
 
 main .card h2 {
+
     position: absolute;
     top: 1.6rem;
     right: 1.6rem;
@@ -120,7 +114,6 @@ main .card h2 {
     height: 3.5rem;
     padding: 0 2.3rem;
     
-
     background-color: var(--bg-color-h2);
     color: var(--color-h2);
     border-radius: 2rem;
@@ -130,17 +123,16 @@ main .card h2 {
     line-height: 3.4rem;
     letter-spacing: 0.05em;
 
-
-
+    animation: animation-h2 600ms 800ms backwards;
 
 }
 
 main .card img {
+
     width: 100%;
     height: 100%;
     border-radius: 2rem; 
     object-fit: cover;
-    
     
 }
 
@@ -150,36 +142,25 @@ main .wrapper-cards {
     flex-direction: column;
     gap: 3.2rem;
 
-    padding: 0 3.2rem;
-    
-    animation: bottomtop 700ms 450ms backwards;
-
-    transition: all;
-    
-
-    
 }
 
 main .wrapper-cards > div:nth-child(2), main .wrapper-cards > div:nth-child(4) {
+
     height: 45rem;
 
 }
 
 main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
+
     height: 25rem;
 
 }
 
-@keyframes bottomtop {
-
+@keyframes topbootom {
     0% {
 
-        
         opacity: 0;
-
-        transition: 200px 200ms ;
-        
-        
+        transform: translateY(20rem);
 
     }
 
@@ -187,11 +168,26 @@ main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
 
         opacity: 1;
 
-        transition: 300px 200ms;
+    }
+}
+
+@keyframes animation-h2{
+    0% {
+
+        opacity: 0;
+        transform: translateY(-1.6rem);
 
     }
 
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+    
+    }
 }
+
+
 
 
 
