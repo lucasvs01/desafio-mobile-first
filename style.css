@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --font-header: 'Staatliches', cursive;
+    --font-main: 'Palanquin', sans-serif;
+
+    --bg-color: hsl(233, 100%, 97%);
+    --bg-color-secundary: hsl(218, 17%, 62%);
+    --bg-color-h1: hsl(275, 18%, 79%);
+    --bg-color-h2: hsl(312, 91%, 96%);
+    --color-h2: hsl(232, 17%, 35%);
+    --color-p: hsl(274, 84%, 12%);
+
+
+}
+
+body {
+
+    text-align: center;
+
+    background-color: var(--bg-color);
+    font-family: var(--font-header);
+
+    
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    width: 100%;
+    height: 28rem;
+
+    background-color: var(--bg-color-secundary);
+}
+
+header {
+    height: 28rem;
+    
+}
+
+header img {
+    margin: 3.2rem auto 0;
+
+}
+
+header h1 {
+
+    font-family: var(--font-header);
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+
+    color: white;
+    background-color: var(--bg-color-h1);
+
+    margin: 3.2rem auto 0;
+    padding: 8px 0;
+
+
+
+}
+
+main {
+    max-width: 32rem;
+    height: 164.2rem;
+    margin: 1.4rem auto 6rem;
+
+    
+
+    
+    
+
+}
+
+
+main p {
+
+    color: var(--color-p);
+
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5rem;
+
+    margin: 0 auto 6.3rem;
+
+    max-width: 30.5rem;
+
+
+}
+
+main .card {
+
+    position: relative;
+    
+
+
+
+}
+
+main .card h2 {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    width: 11.2rem;
+    height: 3.5rem;
+    padding: 0 2.3rem;
+    
+
+    background-color: var(--bg-color-h2);
+    color: var(--color-h2);
+    border-radius: 2rem;
+
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+
+
+
+
+}
+
+main .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem; 
+    object-fit: cover;
+    
+    
+}
+
+main .wrapper-cards {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    
+
+    
+}
+
+main .wrapper-cards > div:nth-child(2), main .wrapper-cards > div:nth-child(4) {
+    height: 45rem;
+
+}
+
+main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
+    height: 25rem;
+
+}
+
+
+
+
+
+
