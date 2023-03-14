@@ -95,6 +95,7 @@ main p {
     line-height: 1.5rem;
 
     margin: 0 auto 6.3rem;
+    padding: 0 4rem;
 
     max-width: 30.5rem;
 
@@ -149,6 +150,11 @@ main .wrapper-cards {
     flex-direction: column;
     gap: 3.2rem;
 
+    padding: 0 3.2rem;
+    
+    animation: bottomtop 700ms 450ms backwards;
+
+    transition: all;
     
 
     
@@ -164,6 +170,28 @@ main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
 
 }
 
+@keyframes bottomtop {
+
+    0% {
+
+        
+        opacity: 0;
+
+        transition: 200px 200ms ;
+        
+        
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transition: 300px 200ms;
+
+    }
+
+}
 
 
 
