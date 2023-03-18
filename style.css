@@ -12,6 +12,8 @@
 
     --font-header: 'Staatliches', cursive;
     --font-main: 'Palanquin', sans-serif;
+    --font-footer: 'Open Sans', sans-serif;
+    --font-p: 'Roboto', sans-serif;
 
     --bg-color: hsl(233, 100%, 97%);
     --bg-color-secundary: hsl(218, 17%, 62%);
@@ -150,23 +152,31 @@ main .wrapper-cards {
     
     gap: 3.6rem;
 
-    height: 150.4rem;
+    grid-template-columns: 32rem;
+    grid-template-rows: 25rem 45rem 25rem 45rem;
 
     
 
 }
 
-main .wrapper-cards > div:nth-child(2), main .wrapper-cards > div:nth-child(4) {
-
-    height: 45rem;
-
+.card:nth-child(5) {
+        
+    
+    
+    display: none;
 }
 
-main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
+.card:nth-child(6) {
+    
+    display: none;
+    
+}
 
-    height: 25rem;
 
-} 
+footer {
+    
+}
+ 
 
 @keyframes topbootom {
     0% {
@@ -206,10 +216,6 @@ main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
 
         max-width: 128rem;
         height: 72rem;
-        
-
-        
-
     }
 
     
@@ -236,6 +242,8 @@ main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
     }
 
     header img {
+
+        
 
         
 
@@ -272,11 +280,12 @@ main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
     main .wrapper-cards {
         gap: 3.2rem;
 
-        grid-template-areas: "A B" "C D";
+        grid-template-areas: "A B E" 
+                            "C B F"
+                            "C D F";
 
-        
-        
-        
+        grid-template-columns: 22rem 22rem 22rem;
+        grid-template-rows: 15rem 16.8rem 15rem;  
     }    
 
     .card:nth-child(1) {
@@ -301,11 +310,48 @@ main .wrapper-cards > div:nth-child(1), main .wrapper-cards > div:nth-child(3) {
         grid-area: C;
     }
 
+    .card:nth-child(5) {
+        
+        display: flex;
+        grid-area: E;
+    }
+    
+    .card:nth-child(6) {
+
+        display: flex;
+        grid-area: F;
+    }
+
+    
+    footer {
+
+        
+        display:;
+
+        font-family: var(--font-footer);
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+
+        color: var(--color-h2);
+
+
+        grid-template-columns: 59.2rem;
+        margin: 5rem auto 4.6rem;
+
+
+
+
+    }
+
+    footer p a {
+        text-decoration: none;
+
+        font-weight: 700;
+    }
+
     
 }
-
-
-
 
 
 
